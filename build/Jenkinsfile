@@ -54,8 +54,8 @@ pipeline {
         stage('Deploy to Kubernetes') {
             steps {
                 // Update deployment YAML with new image tags
-                sh "sed -i 's|my-dockerhub-username/my-app-backend:.*|$DOCKER_BACKEND_IMAGE:$BUILD_NUMBER|g' k8s/deployment.yaml"
-                sh "sed -i 's|my-dockerhub-username/my-app-frontend:.*|$DOCKER_FRONTEND_IMAGE:$BUILD_NUMBER|g' k8s/deployment.yaml"
+                sh "sed -i 's|abinayabalusamy/hall-booking-backend:.*|$DOCKER_BACKEND_IMAGE:$BUILD_NUMBER|g' k8s/deployment.yaml"
+                sh "sed -i 's|abinayabalusamy/hall-booking-frontend:.*|$DOCKER_FRONTEND_IMAGE:$BUILD_NUMBER|g' k8s/deployment.yaml"
                 
                 // Apply the updated deployment
                 sh 'kubectl apply -f k8s/deployment.yaml'
