@@ -4,8 +4,8 @@ pipeline {
     environment {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-credentials')
         DOCKER_REGISTRY = "docker.io"
-        DOCKER_BACKEND_IMAGE = "kongu/hall-booking-backend"
-        DOCKER_FRONTEND_IMAGE = "kongu/hall-booking-frontend"
+        DOCKER_BACKEND_IMAGE = "abinayabalusamy/hall-booking-backend"
+        DOCKER_FRONTEND_IMAGE = "abinayabalusamy/hall-booking-frontend"
     }
     
     stages {
